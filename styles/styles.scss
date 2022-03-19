@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+// Site Color Variables
+$color-primary: #191D2B;
+$color-secondary: #27AE60;
+$color-color-white: #FFFFFF;
+$color-color-black: #000000;
+$color-color-grey-0: #F8F8F8;
+$color-color-grey-1: #DBE1E8;
+$color-color-grey-2: #B2BECD;
+$color-color-grey-3: #6C7983;
+$color-color-grey-4: #454E56;
+$color-color-grey-5: #2A2E35;
+$color-color-grey-6: #12181B;
+
+// Site Misc Variables
+$box-shadow-1: 0 3px 15px rgba(0, 0, 0, .2);
+
+body {
+    background: $color-primary;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: $color-color-white;
+    transition: all .4s ease-in-out;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+header {
+    height: 100vh;
+    color: $color-color-white;
+    overflow: hidden;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
+
+.section {
+    transform: translate(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: $color-primary;
+}
+
+.sec1 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: rgb(106, 148, 236);
+}
+.sec2 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: slateblue;
+}
+.sec3 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: rgb(146, 205, 90);
+}
+.sec4 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: rgb(205, 90, 171);
+}
+.sec5 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: rgb(194, 102, 49);
+}
+
+// Controls
+.controls {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+
+    .active-btn {
+        background-color: $color-secondary !important;
+        transition: all .4s ease-in-out;
+        i {
+            color: $color-color-white !important;
+        }
+    }
+
+    .control {
+        padding: 1rem;
+        cursor: pointer;
+        background-color: $color-color-grey-4;
+        width: 3.4375rem;
+        height: 3.4375rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: .7rem 0;
+        box-shadow: $box-shadow-1;
+        i {
+            font-size: 1.2rem;
+            color: $color-color-grey-2;
+            pointer-events: none;
+        }
+    }
+}
